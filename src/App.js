@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import Flat from './components/flat';
 import GoogleMapReact from 'google-map-react';
 import Marker from './components/marker'
+// import Flats from './flats.json';
+// https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json
 
 // const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -19,7 +21,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const url = "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json";
+    const url = "flats.json";
     fetch(url)
       .then(response => response.json())
       .then((data) => {
